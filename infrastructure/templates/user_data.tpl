@@ -11,7 +11,7 @@ sudo -u ubuntu -- kubectl create deployment hello-minikube --image=eilidhmae/app
 sudo -u ubuntu -- kubectl expose deployment hello-minikube --type=LoadBalancer --port=5000 --target-port=5000
 cat >/root/demo.sh << "EOF"
 sudo -u ubuntu -- nohup minikube tunnel &>/dev/null &
-sleep 30
+sleep 60
 sudo -u ubuntu -- nohup kubectl port-forward --address 0.0.0.0 svc/hello-minikube 8080:5000 &>/home/ubuntu/port-forward.log &
 EOF
 chmod a+x /root/demo.sh
