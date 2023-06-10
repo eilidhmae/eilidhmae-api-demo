@@ -18,5 +18,5 @@ Verify the port-forward is running: ps aux |grep port-forward
 If the port-forward is not running, check /home/ubuntu/port-forward.log, and perhaps increase the sleep value in templates/user_data.hcl.
 
 ## Results
-Point your browser to http://<terraform output public_ip>:8080/
+Point your browser to http://"terraform output public_ip":8080/
 
